@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palmchat</title>
+  <link rel="stylesheet" href="static/style.css">
+  <link rel="shortcut icon" href="palmchat-modified.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="container">
+    <h1>The Era of AI</h1>
+    <p>Artificial intelligence (AI) is a branch of computer science that involves building machines that can perform
+      tasks that typically require human intelligence.</p>
+  </div>
+
+  <div class="blank" id="about">
+    <h2>About Palmchat</h2>
+    <img class="img_bout" src="static/image-74-7.jpg" alt="Palmchat Logo">
+    <p class="about_p">Palmchat is an innovative AI-powered chat application. We created Palmchat as an
+      alternative to ChatGPT, offering real-time conversations with a powerful AI chatbot. The chatbot can provide
+      information, answer questions, and engage in various conversations. This project showcases Atharv's passion for AI
+      and coding. Join us on this exciting journey with Palmchat!</p>
+  </div>
+
+
+
+  </div>
+
+  <div class="container second">
+    <!-- <div class="item">
+      <div class="img img-first"></div>
+      <div class="card">
+        <h3>Weak AI</h3>
+        <p>Weak artificial intelligence (AI) is a type of AI that is limited to a specific area. It is also known as narrow AI.While weak AI systems can perform certain tasks, they are not as capable as strong AI systems.</p>
+        <a  class="body_a" href="weak.html">Learn more</a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="img img-second"></div>
+      <div class="card">
+        <h3>General AI</h3>
+        <p>Artificial general intelligence (AGI) is the representation of generalized human cognitive abilities in software.The intention of an AGI system is to perform any task that a human being is capable of.</p>
+        <a class="body_a" href="general.html">Learn more</a>
+      </div>
+    </div> -->
+    {% for blog in blogs %}
+    <div class="item">
+      <div class="img img-third"></div>
+      <div class="card">
+        <h3>{{blog.title}}</h3>
+        <br>
+        <a class="body_a" href="/blog/{{blog.id}}">Learn more</a>
+      </div>
+    </div>
+  </div>
+  <br>
+  {% endfor %}
+
+
+  <nav class="blocks">
+    <a href="/" class="block">
+      <div class="block__item">
+        <svg style="color: white" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+          class="bi bi-house" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
+            fill="white"></path>
+          <path fill-rule="evenodd"
+            d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"
+            fill="white"></path>
+        </svg>
+      </div>
+    </a>
+    <a href="#about" class="block">
+      <div class="block__item">
+        <svg style="color: white" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+          <title>ionicons-v5-f</title>
+          <path
+            d="M256,56C145.72,56,56,145.72,56,256s89.72,200,200,200,200-89.72,200-200S366.28,56,256,56Zm0,82a26,26,0,1,1-26,26A26,26,0,0,1,256,138Zm64,226H200V332h44V244H212V212h64V332h44Z"
+            fill="white"></path>
+        </svg>
+      </div>
+    </a>
+    <a href="/contact" class="block">
+      <div class="block__item">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+        </svg>
+      </div>
+    </a>
+
+    </a>
+    <a href="/palmchat" class="block">
+      <div class="block__item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M13 8c0-2.76-2.46-5-5.5-5S2 5.24 2 8h2l1-1 1 1h4" />
+          <path d="M13 7.14A5.82 5.82 0 0 1 16.5 6c3.04 0 5.5 2.24 5.5 5h-3l-1-1-1 1h-3" />
+          <path
+            d="M5.89 9.71c-2.15 2.15-2.3 5.47-.35 7.43l4.24-4.25.7-.7.71-.71 2.12-2.12c-1.95-1.96-5.27-1.8-7.42.35z" />
+          <path d="M11 15.5c.5 2.5-.17 4.5-1 6.5h4c2-5.5-.5-12-1-14" />
+        </svg>
+      </div>
+    </a>
+    {% if session['user'] %}
+    <a href="/logout" class="block">
+      <div class="block__item">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+        </svg>
+      </div>
+    </a>
+    {% else %}
+    <a href="/login" class="block">
+      <div class="block__item">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+        </svg>
+      </div>
+    </a>
+    {% endif %}
+  </nav>
+
+</body>
+
+</html>

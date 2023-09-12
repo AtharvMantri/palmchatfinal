@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
+</head>
+
+<body>
+
+    <!-- Blog Post Adding Form -->
+    <div class="max-w-md mx-auto mt-6 bg-white p-6 rounded-md shadow-md">
+        <h2 class="text-2xl font-semibold mb-6 text-center">Add New Blog Post</h2>
+        <form action="/addblog" method="POST" class="space-y-4" enctype="multipart/form-data">
+            <div class="mb-4">
+                <label for="title" class="block font-semibold mb-1">Title</label>
+                <input type="text" id="title" name="title"
+                    class="w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="content" class="block font-semibold mb-1">Content</label>
+                <textarea id="content" name="content"
+                    class="w-full border rounded-md px-3 py-2 h-32 resize-none focus:outline-none focus:border-blue-500"></textarea>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 mb-4">
+                <div>
+                    <label for="author" class="block font-semibold mb-1">Author</label>
+                    <input type="text" id="author" name="author"
+                        class="w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500">
+                </div>
+                <div>
+
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">
+                Add Blog Post
+            </button>
+        </form>
+    </div>
+</body>
+
+</html>
